@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To Do App</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>TO DO APP</h1>
+        <form>
+          <input
+            type="text"
+            id="inputList"
+            autocomplete="off"
+            placeholder="ADD NEW LIST"
+          />
+          <button type="button" id="addListButton">ADD</button>
+        </form>
+      </div>
+      <div id="listsContainer"></div>
+    </div>
+
+    <script type="text/template" id="itemTemplate">
+      <li>
+        <button type="button" class="markItemCompleteButton" data-id="{{itemId}}">{{isComplete}}</button>
+        <span class="listText {{textStyle}}">{{item}}</span>
+        <button type="button" class="deleteItemButton" data-id="{{itemId}}">DEL</button>
+      </li>
+    </script>
+
+    <script type="text/template" id="listTemplate">
+      <div class="listContainer">
+        <div class="listHeader">
+          <h3>
+            {{title}}
+            <button type="button" class="deleteListButton" data-id="{{listId}}">DEL</button>
+          </h3>
+          <form>
+            <input type="text" id="inputItem-{{listId}}" autocomplete="off" placeholder="ADD NEW ITEM"/>
+            <button type="button" id="addItemButton-{{listId}}" data-id="{{listId}}">ADD</button>
+          </form>
+        </div>
+        <div class="listBody">
+          <ul id="list-{{listId}}"></ul>
+        </div>
+      </div>
+    </script>
+
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

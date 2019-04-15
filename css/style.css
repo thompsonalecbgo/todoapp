@@ -1,0 +1,60 @@
+.container {
+  font-family: monospace;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 3rem 1rem 2rem;
+  padding: 0 1rem;
+  /* text-align: center; */
+}
+
+.listContainer {
+  border: 1px solid black;
+  margin: 2rem 1rem;
+  padding: 0.5rem 1rem;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 0.2rem;
+}
+
+form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+  line-height: 2.5;
+}
+
+li {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  width: calc(100% - 71.484px);
+  padding: 0 0.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.listText {
+  width: calc(100% - 110.968px);
+  word-wrap: break-word;
+}
+
+.listTextChecked {
+  text-decoration: line-through;
+}
